@@ -1,0 +1,28 @@
+<section class="flex flex-col mx-auto justify-center items-center min-h-screen">
+    <div class="flex max-w-2xl bg-amber-100">
+        <form [formGroup]="form" class="flex flex-col" (ngSubmit)="signUp()">
+
+            <div class="flex flex-col">
+                <label for="">Name</label>
+                <input class="border-amber-50 border-2 rounded-md h-9 bg-amber-50" type="text" placeholder="joel">
+            </div>
+            <div class="flex flex-col">
+                <label for="">Last Name</label>
+                <input class="border-amber-50 border-2 rounded-md h-9 bg-amber-50" type="text" placeholder="joel">
+            </div>
+            <div class="flex flex-col">
+                <label for="">Email</label>
+                <input class="border-amber-50 border-2 rounded-md h-9 bg-amber-50" type="text" placeholder="joel">
+            </div>
+            <div class="flex flex-col">
+                <label for="">Password</label>
+                <input [type]="hide ? 'password' : 'text'" class="border-amber-50 border-2 rounded-md h-9 bg-amber-50"
+                    type="text" placeholder="joel">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? "visibility_off" : "visibility"}}</mat-icon>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
